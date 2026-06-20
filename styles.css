@@ -1,0 +1,55 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #17313b;
+  background: #f5fbfa;
+  line-height: 1.5;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; }
+button, input, textarea, select { font: inherit; }
+
+.app-shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0; }
+.hero { display: grid; gap: 28px; }
+.hero-card, .form-card, .report-card, .panel { background: rgba(255,255,255,0.92); border: 1px solid #dcefeb; border-radius: 28px; box-shadow: 0 20px 70px rgba(28, 81, 92, 0.1); }
+.hero-card { padding: clamp(28px, 5vw, 60px); background: linear-gradient(135deg, #ffffff 0%, #e8f8f2 55%, #e7f1ff 100%); }
+.eyebrow { color: #13856e; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; margin: 0 0 8px; }
+h1 { font-size: clamp(3rem, 9vw, 6rem); margin: 0; letter-spacing: -0.07em; color: #0f3440; }
+h2 { font-size: clamp(2rem, 5vw, 3.4rem); margin: 0; letter-spacing: -0.05em; }
+h3 { margin: 28px 0 14px; color: #0f3440; }
+.tagline { font-size: 1.2rem; max-width: 780px; color: #385b64; }
+.disclaimer { padding: 14px 16px; background: #eaf7f3; border: 1px solid #c9e8df; border-radius: 16px; color: #24544c; font-weight: 700; }
+.prominent { margin: 18px 0; background: #fff8df; border-color: #f0d888; color: #5b4b12; }
+.area-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.area-card { text-align: left; min-height: 210px; padding: 24px; border-radius: 24px; border: 1px solid #d6e9e5; background: #fff; cursor: pointer; transition: .2s ease; display: flex; flex-direction: column; gap: 12px; color: inherit; }
+.area-card:hover { transform: translateY(-4px); border-color: #74c7b8; box-shadow: 0 16px 42px rgba(24, 122, 112, .12); }
+.area-icon { font-size: 2.2rem; }
+.area-title { font-size: 1.35rem; font-weight: 850; }
+.area-tagline, .section-heading p { color: #527078; margin: 0; }
+.panel { padding: clamp(20px, 4vw, 44px); }
+.section-heading, .report-top { display: flex; gap: 16px; align-items: center; justify-content: space-between; }
+.form-card, .report-card { padding: clamp(20px, 4vw, 34px); margin-top: 24px; }
+.form-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.form-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.field { display: grid; gap: 8px; margin-bottom: 16px; font-weight: 700; color: #274a54; }
+.field b { color: #0a8e78; }
+input, textarea, select { width: 100%; border: 1px solid #cfe3df; border-radius: 14px; padding: 12px 14px; background: #fbfffe; color: #17313b; outline: none; }
+input:focus, textarea:focus, select:focus { border-color: #1ea68d; box-shadow: 0 0 0 4px rgba(30,166,141,.12); }
+.unit-row { display: flex; gap: 18px; flex-wrap: wrap; margin: 6px 0 14px; color: #41666f; font-weight: 700; }
+.primary-button { display: inline-flex; align-items: center; justify-content: center; width: 100%; border: 0; border-radius: 16px; padding: 15px 18px; background: linear-gradient(135deg, #12826e, #2679c7); color: white; font-weight: 850; cursor: pointer; margin-top: 10px; }
+.primary-button:disabled { opacity: .65; cursor: not-allowed; }
+.primary-button.secondary { max-width: 240px; }
+.link-button { border: 0; background: transparent; color: #147d6c; font-weight: 850; cursor: pointer; margin-bottom: 20px; }
+.mini-disclaimer { color: #607982; font-size: .92rem; text-align: center; }
+.error-box { padding: 12px 14px; border-radius: 14px; background: #fff0f0; border: 1px solid #ffd1d1; color: #8c1f1f; font-weight: 700; }
+.report-layout { max-width: 900px; margin: 0 auto; }
+.score-badge { display: inline-flex; align-items: center; padding: 12px 16px; border-radius: 999px; background: #e8f8f2; color: #106f5e; font-weight: 900; border: 1px solid #bee2d9; white-space: nowrap; }
+.report-card li { margin-bottom: 10px; }
+.markdownish p { margin: 0 0 12px; }
+
+@media (max-width: 840px) {
+  .area-grid, .form-grid, .form-grid.two { grid-template-columns: 1fr; }
+  .section-heading, .report-top { align-items: flex-start; flex-direction: column; }
+  .area-card { min-height: auto; }
+  .score-badge { white-space: normal; }
+}
